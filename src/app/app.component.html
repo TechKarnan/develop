@@ -1,0 +1,49 @@
+<h1>hello world</h1>
+<h1 *ngIf="show=='yes';then ifblock else eblock ">ngif working......!</h1>
+
+<ng-template #ifblock>
+  <h1>if block</h1>
+</ng-template>
+
+<ng-template #eblock>
+  <h1>else part</h1>
+</ng-template>
+
+<ng-template [ngIf]="show=='red'">
+  <p>red...!</p>
+
+</ng-template>
+
+<ng-template [ngIf]="show=='green'">
+  <p>green...!</p>
+
+</ng-template>
+
+<ng-template [ngIf]="show=='blue'">
+  <p>blue...!</p>
+
+</ng-template>
+
+<div [ngSwitch]="color">
+
+  <h1 style="color: red;" *ngSwitchCase="'red'">red</h1>
+
+  <h1 style="color: green;" *ngSwitchCase="'green'">Green....!</h1>
+
+  <h1 style="color: blue;" *ngSwitchCase="'blue'"></h1>
+   
+  <h1 style="color: grey;" *ngSwitchDefault></h1>
+</div>
+
+<table border="1px">
+  <th>Name</th>
+  <th>age</th>
+  <th>Company Name</th>
+  <tr *ngFor="let item of data">
+    <td>{{item.name}}</td>
+    <td>{{item.age}}</td>
+    <td>{{item.company}}</td>
+  </tr>
+</table>
+
+
